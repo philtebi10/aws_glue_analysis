@@ -43,7 +43,7 @@ Athena: athena:StartQueryExecution, athena:GetQueryResults
 
 2. In the top, next to the search bar you will see a square with a >_ inside, click this to open the CloudShell
 
-# Step 2: Create the setup_nba_data_lake.py file
+# Step 2: Create the analysis.py file
 1. In the CLI (Command Line Interface), type
 ```bash
 nano analysis.py
@@ -79,7 +79,7 @@ NBA_ENDPOINT=https://api.sportsdata.io/v3/nba/scores/json/Players
 # Step 4: Run the script
 1. In the CLI type
 ```bash
-python3 setup_nba_data_lake.py
+python3 analysis.py
 ```
 -You should see the resources were successfully created, the sample data was uploaded successfully and the Data Lake Setup Completed
 
