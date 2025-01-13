@@ -2,7 +2,7 @@
 This repository contains the setup_nba_data_lake.py script, which automates the creation of a data lake for NBA analytics using AWS services. The script integrates Amazon S3, AWS Glue, and Amazon Athena, and sets up the infrastructure needed to store and query NBA-related data.
 
 # Overview
-The setup_nba_data_lake.py script performs the following actions:
+The analysis.py script performs the following actions:
 
 Creates an Amazon S3 bucket to store raw and processed data.
 Uploads sample NBA data (JSON format) to the S3 bucket.
@@ -44,13 +44,13 @@ Athena: athena:StartQueryExecution, athena:GetQueryResults
 # Step 2: Create the setup_nba_data_lake.py file
 1. In the CLI (Command Line Interface), type
 ```bash
-nano setup_nba_data_lake.py
+nano analysis.py
 ```
 
 
-2. In another window, go to [GitHub](https://github.com/alahl1/NBADataLake)
+2. In another window, go to https://github.com/philtebi10/aws_glue_analysis.git
 
--Copy the contents inside the setup_nba_data_lake.py file
+-Copy the contents inside the analysis.py file
 
 -Go back to the Cloudshell window and paste the contents inside the file.
 
@@ -67,7 +67,7 @@ nano .env
 ```
 2. paste the following line of code into your file, ensure you swap out with your API key
 ```bash
-SPORTS_DATA_API_KEY=your_sportsdata_api_key
+SPORTS_DATA_API_KEY=analysis_key
 NBA_ENDPOINT=https://api.sportsdata.io/v3/nba/scores/json/Players
 ```
 
@@ -84,7 +84,7 @@ python3 setup_nba_data_lake.py
 # Step 5: Manually Check For The Resources
 1. In the Search Bar, type S3 and click blue hyper link name
 
--You should see 2 General purpose bucket named "Sports-analytics-data-lake"
+-You should see 2 General purpose bucket named "Sports-analytics"
 
 -When you click the bucket name you will see 3 objects are in the bucket
 
